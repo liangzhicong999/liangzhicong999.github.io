@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style:none;
+        }
+        .box{
+            width: 1160px;
+            height: 516px;
+            border:1px solid blue;
+            margin:0px auto;
+            margin-top: 100px;
+            background:url(images/bg.jpg) no-repeat left center;
+        }
+        .box ul li{
+            width: 220px;
+            height: 516px;
+            float: left;
+            margin-left: 10px;
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+        .box ul li:hover{
+            transform:translateY(-20px);
+        }
+        .box .qrcode{
+            width: 204px;
+            position: absolute;
+            left: 8px;
+            bottom: 0;
+            transform:translateY(110%);
+            /* 设置元素以及其内容的透明度 */
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .box .qrcode img{
+            width: 100%;
+        }
+        .box ul li:hover .qrcode{
+            transform:translateY(0px);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="images/1.gif"/></li>
+
+            <li>
+                <img src="images/2.jpg">
+                <div class="qrcode">
+                    <img src="images/qrcode.jpg"/>
+                </div>
+            </li>
+
+            <li><img src="images/3.jpg"></li>
+            <li><img src="images/4.jpg"></li>
+            <li><img src="images/5.gif"></li>
+        </ul>
+    </div>
+</body>
+</html>
